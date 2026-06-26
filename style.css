@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#111111;
+
+    color:white;
+
+    font-family:Arial, sans-serif;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    user-select:none;
+
+}
+
+#timer{
+
+    font-size:9rem;
+
+    font-weight:700;
+
+    letter-spacing:-4px;
+
+}
