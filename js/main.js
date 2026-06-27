@@ -2,6 +2,12 @@ import * as Timer from "./timer.js";
 import { updateDisplay, setState } from "./ui.js";
 
 const resetButton = document.getElementById("resetButton");
+const plus2Button = document.getElementById("plus2Button");
+const dnfButton = document.getElementById("dnfButton");
+
+let lastTime = 0;
+let hasPlus2 = false;
+let isDNF = false;
 
 const HOLD_TIME = 300;
 
@@ -36,6 +42,11 @@ document.addEventListener("keydown", (event) => {
     else if (state === "RUNNING") {
 
         Timer.stop();
+
+        lastTime = Number(document.getElementById("timer").textContent);
+
+        hasPlus2 = false;
+        isDNF = false;
 
         state = "IDLE";
         setState("IDLE");
@@ -126,5 +137,49 @@ resetButton.addEventListener("click", () => {
     if (Timer.running()) return;
 
     updateDisplay(0);
+
+});
+
+plus2Button.addEventListener("click", () => {
+
+    if (Timer.running()) return;
+
+    if (lastTime === 0) return;
+
+    hasPlus2 = !hasPlus2;
+
+    let display = lastTime;
+
+    if (hasPlus2)
+        display += 2;
+
+    document.getElementById("timer").textContent =
+        display.toFixed(2);
+
+});
+
+dnfButton.addEventListener("click", () => {
+
+    if (Timer.running()) return;
+
+    if (lastTime === 0) return;
+
+    isDNF = !isDNF;
+
+    if (isDNF){
+
+        document.getElementById("timer").textContent = "DNF";
+
+    }else{
+
+        let display = lastTime;
+
+        if(hasPlus2)
+            display += 2;
+
+        document.getElementById("timer").textContent =
+            display.toFixed(2);
+
+    }
 
 });
