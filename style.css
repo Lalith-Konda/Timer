@@ -32,6 +32,8 @@ body{
 
     letter-spacing:-4px;
 
+    font-variant-numeric: tabular-nums;
+
 }
 
 
