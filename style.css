@@ -34,53 +34,7 @@ body{
 
 }
 
-#resetButton {
 
-    margin-top: 40px;
-
-    padding: 12px 28px;
-
-    border: none;
-
-    border-radius: 999px;
-
-    background: #222;
-
-    color: white;
-
-    font-size: 1rem;
-
-    cursor: pointer;
-
-    transition: 0.2s ease;
-
-}
-
-#resetButton:hover {
-
-    background: #333;
-
-    transform: translateY(-2px);
-
-}
-
-#resetButton:active {
-
-    transform: scale(0.96);
-
-}
-
-#controls {
-
-    margin-top: 35px;
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 14px;
-
-}
 
 #controls button {
 
