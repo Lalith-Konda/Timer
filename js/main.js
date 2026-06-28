@@ -1,6 +1,9 @@
 import * as Timer from "./timer.js";
 import { updateDisplay, setState } from "./ui.js";
 
+const menuButton = document.getElementById("menuButton");
+const sidebar = document.getElementById("sidebar");
+
 const resetButton = document.getElementById("resetButton");
 const plus2Button = document.getElementById("plus2Button");
 const dnfButton = document.getElementById("dnfButton");
@@ -181,5 +184,11 @@ dnfButton.addEventListener("click", () => {
             display.toFixed(2);
 
     }
+
+});
+
+menuButton.addEventListener("click", () => {
+
+    sidebar.classList.toggle("open");
 
 });
