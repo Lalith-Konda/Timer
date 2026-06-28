@@ -206,13 +206,25 @@ body{
 
 }
 
-#sidebar h2 {
+#sidebarHeader{
 
-    margin-top: 72px;
-    margin-left: 8px;
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-left:64px;
 
 }
 
+#sidebarHeader h2{
+
+    color:rgb(255,171,93);
+
+    font-size:1.4rem;
+
+}
 /* ---------- CONTENT ---------- */
 
 #content{
