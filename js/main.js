@@ -3,6 +3,7 @@ import { updateDisplay, setState } from "./ui.js";
 
 const menuButton = document.getElementById("menuButton");
 const sidebar = document.getElementById("sidebar");
+const content = document.getElementById("content");
 
 const resetButton = document.getElementById("resetButton");
 const plus2Button = document.getElementById("plus2Button");
@@ -192,5 +193,7 @@ menuButton.addEventListener("click", () => {
     sidebar.classList.toggle("open");
 
     menuButton.classList.toggle("open");
+
+    content.classList.toggle("shift");
 
 });
