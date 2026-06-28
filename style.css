@@ -205,3 +205,17 @@ body{
     left:0;
 
 }
+
+/* ---------- CONTENT ---------- */
+
+#content{
+
+    transition: transform .25s ease;
+
+}
+
+#content.shift{
+
+    transform: translateX(220px);
+
+}
