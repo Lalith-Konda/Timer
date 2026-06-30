@@ -305,3 +305,73 @@ body{
     font-size:1.2rem;
 
 }
+
+#comingSoon{
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    text-align:center;
+
+}
+
+#comingSoon h1{
+
+    color:rgb(255,171,93);
+
+    font-size:2.8rem;
+
+}
+
+#comingSoon h2{
+
+    color:white;
+
+    font-size:2rem;
+
+}
+
+#comingSoon p{
+
+    color:#777;
+
+    font-size:1rem;
+
+}
+
+#comingSoon button{
+
+    margin-top:15px;
+
+    padding:12px 24px;
+
+    background:#242424;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    transition:.2s;
+
+}
+
+#comingSoon button:hover{
+
+    background:#333;
+
+}
