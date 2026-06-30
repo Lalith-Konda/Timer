@@ -227,7 +227,7 @@ solvesPageButton.addEventListener("click", () => {
 
 statisticsPageButton.addEventListener("click", () => {
 
-    alert("Statistics clicked");
+    window.location.href = "statistics.html";
 
 });
 
