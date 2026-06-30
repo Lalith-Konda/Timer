@@ -236,3 +236,5 @@ settingsPageButton.addEventListener("click", () => {
     alert("Settings clicked");
 
 });
+
+console.log("Nova Timer version 0.5.1");
