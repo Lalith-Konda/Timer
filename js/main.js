@@ -9,6 +9,8 @@ const resetButton = document.getElementById("resetButton");
 const plus2Button = document.getElementById("plus2Button");
 const dnfButton = document.getElementById("dnfButton");
 
+const solvesPageButton = document.getElementById("solvesPageButton");
+
 let lastTime = 0;
 let hasPlus2 = false;
 let isDNF = false;
@@ -48,10 +50,16 @@ document.addEventListener("keydown", (event) => {
         Timer.stop();
 
         lastTime = Number(document.getElementById("timer").textContent);
-
+        
+        let solves = JSON.parse(sessionStorage.getItem("solves")) || [];
+        
+        solves.push(lastTime);
+        
+        sessionStorage.setItem("solves", JSON.stringify(solves));
+        
         hasPlus2 = false;
         isDNF = false;
-
+        
         state = "IDLE";
         setState("IDLE");
 
@@ -106,10 +114,21 @@ document.addEventListener("touchstart", (event) => {
     else if (state === "RUNNING") {
 
         Timer.stop();
-
+    
+        lastTime = Number(document.getElementById("timer").textContent);
+    
+        let solves = JSON.parse(sessionStorage.getItem("solves")) || [];
+    
+        solves.push(lastTime);
+    
+        sessionStorage.setItem("solves", JSON.stringify(solves));
+    
+        hasPlus2 = false;
+        isDNF = false;
+    
         state = "IDLE";
         setState("IDLE");
-
+    
     }
 
 });
@@ -195,5 +214,11 @@ menuButton.addEventListener("click", () => {
     menuButton.classList.toggle("open");
 
     content.classList.toggle("shift");
+
+});
+
+solvesPageButton.addEventListener("click", () => {
+
+    window.location.href = "solves.html";
 
 });
