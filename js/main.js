@@ -233,7 +233,7 @@ statisticsPageButton.addEventListener("click", () => {
 
 settingsPageButton.addEventListener("click", () => {
 
-    alert("Settings clicked");
+    window.location.href = "statistics.html";
 
 });
 
