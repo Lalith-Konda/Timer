@@ -227,12 +227,12 @@ solvesPageButton.addEventListener("click", () => {
 
 statisticsPageButton.addEventListener("click", () => {
 
-    window.location.href = "statistics.html";
+    alert("Statistics clicked");
 
 });
 
 settingsPageButton.addEventListener("click", () => {
 
-    window.location.href = "settings.html";
+    alert("Settings clicked");
 
 });
