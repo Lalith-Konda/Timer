@@ -225,6 +225,48 @@ body{
     font-size:1.4rem;
 
 }
+
+#sidebarMenu{
+
+    margin-top:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+#sidebarMenu button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:transparent;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    text-align:left;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+#sidebarMenu button:hover{
+
+    background:#2a2a2a;
+
+}
 /* ---------- CONTENT ---------- */
 
 #content{
