@@ -193,17 +193,31 @@ plus2Button.addEventListener("click", () => {
 
     if (Timer.running()) return;
 
-    if (lastTime === 0) return;
+    let solves = JSON.parse(localStorage.getItem("solves")) || [];
 
-    hasPlus2 = !hasPlus2;
+    if (!solves.length) return;
 
-    let display = lastTime;
+    const solve = solves.at(-1);
 
-    if (hasPlus2)
+    solve.plus2 = !solve.plus2;
+
+    localStorage.setItem("solves", JSON.stringify(solves));
+
+    let display = solve.time;
+
+    if (solve.plus2)
         display += 2;
 
-    document.getElementById("timer").textContent =
-        display.toFixed(2);
+    if (solve.dnf){
+
+        document.getElementById("timer").textContent = "DNF";
+
+    }else{
+
+        document.getElementById("timer").textContent =
+            display.toFixed(2);
+
+    }
 
 });
 
@@ -211,19 +225,25 @@ dnfButton.addEventListener("click", () => {
 
     if (Timer.running()) return;
 
-    if (lastTime === 0) return;
+    let solves = JSON.parse(localStorage.getItem("solves")) || [];
 
-    isDNF = !isDNF;
+    if (!solves.length) return;
 
-    if (isDNF){
+    const solve = solves.at(-1);
+
+    solve.dnf = !solve.dnf;
+
+    localStorage.setItem("solves", JSON.stringify(solves));
+
+    if(solve.dnf){
 
         document.getElementById("timer").textContent = "DNF";
 
     }else{
 
-        let display = lastTime;
+        let display = solve.time;
 
-        if(hasPlus2)
+        if(solve.plus2)
             display += 2;
 
         document.getElementById("timer").textContent =
