@@ -71,9 +71,6 @@ document.addEventListener("keydown", (event) => {
         
         localStorage.setItem("solves", JSON.stringify(solves));
         
-        hasPlus2 = false;
-        isDNF = false;
-        
         state = "IDLE";
         setState("IDLE");
 
@@ -148,9 +145,6 @@ document.addEventListener("touchstart", (event) => {
         });
         
         localStorage.setItem("solves", JSON.stringify(solves));
-    
-        hasPlus2 = false;
-        isDNF = false;
     
         state = "IDLE";
         setState("IDLE");
