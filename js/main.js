@@ -53,11 +53,23 @@ document.addEventListener("keydown", (event) => {
 
         lastTime = Number(document.getElementById("timer").textContent);
         
-        let solves = JSON.parse(sessionStorage.getItem("solves")) || [];
+        let solves = JSON.parse(localStorage.getItem("solves")) || [];
+
+        solves.push({
         
-        solves.push(lastTime);
+            time: lastTime,
         
-        sessionStorage.setItem("solves", JSON.stringify(solves));
+            plus2: false,
+        
+            dnf: false,
+        
+            scramble: "",
+        
+            date: Date.now()
+        
+        });
+        
+        localStorage.setItem("solves", JSON.stringify(solves));
         
         hasPlus2 = false;
         isDNF = false;
@@ -119,11 +131,23 @@ document.addEventListener("touchstart", (event) => {
     
         lastTime = Number(document.getElementById("timer").textContent);
     
-        let solves = JSON.parse(sessionStorage.getItem("solves")) || [];
-    
-        solves.push(lastTime);
-    
-        sessionStorage.setItem("solves", JSON.stringify(solves));
+        let solves = JSON.parse(localStorage.getItem("solves")) || [];
+
+        solves.push({
+        
+            time: lastTime,
+        
+            plus2: false,
+        
+            dnf: false,
+        
+            scramble: "",
+        
+            date: Date.now()
+        
+        });
+        
+        localStorage.setItem("solves", JSON.stringify(solves));
     
         hasPlus2 = false;
         isDNF = false;
